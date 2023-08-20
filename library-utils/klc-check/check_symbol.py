@@ -419,6 +419,8 @@ if __name__ == "__main__":
 
     # done checking all files
     error_count = 0
+    warning_count = 0
+
     if args.metrics or args.unittest:
         metrics_file = open("metrics.txt", "a+")
 
@@ -429,5 +431,16 @@ if __name__ == "__main__":
                     error_count += int(line.split()[-1])
 
         metrics_file.close()
+
+    # If high verbosiry, calculate the error and warning count
+    # This will be used by GitHub actions to ensure an warnings and errors are detected by the workflow
+    if verbosity == verbosity.HIGH:
+        for key in job_output:
+            for line in job_output[key]:
+                if ".total_errors" in line:
+                    error_count += int(line.split()[-1])
+                if ".total_warnings" in line:
+                    warning_count += int(line.split()[-1])
+
     out_queue.close()
-    sys.exit(0 if error_count == 0 else -1)
+    sys.exit(0 if error_count == 0 and warning_count == 0 else -1)
