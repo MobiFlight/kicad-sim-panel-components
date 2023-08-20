@@ -35,14 +35,16 @@ jobs:
           format: 'json'
 
       - id: footprint_files
-        name: Run KiCad KLC Footprint Check
+        name: Get Changed Files
         uses: jitterbit/get-changed-files@v1
         with:
           format: 'json'
-      - run: |
-          readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
-          for changed_file in ${changed_files[@]}; do
-            if [[ ${changed_file} == *.kicad_mod ]]; then
-              python ./library-utils/klc-check/check_footprint.py ./${changed_file} -vv
-            fi
-          done
+      
+      - name: Run KiCad KLC Footprint Check
+        run: |
+            readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
+            for changed_file in ${changed_files[@]}; do
+              if [[ ${changed_file} == *.kicad_mod ]]; then
+                python ./library-utils/klc-check/check_footprint.py ./${changed_file} -vv
+              fi
+            done
