@@ -30,10 +30,6 @@ jobs:
           python-version: '3.10.11'
 
       # We use this to limit KLC checking to only changed files
-      - uses: jitterbit/get-changed-files@v1
-        with:
-          format: 'json'
-
       - id: footprint_files
         name: Get Changed Files
         uses: jitterbit/get-changed-files@v1
