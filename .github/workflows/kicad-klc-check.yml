@@ -2,10 +2,13 @@ name: "KLC Compliance Check"
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
+  # and if 
   push:
     branches: [ "main" ]
+    paths: "SimPanel.pretty/*.kicad_mod"
   pull_request:
     branches: [ "main" ]
+    paths: "SimPanel.pretty/*.kicad_mod"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
