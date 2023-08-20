@@ -12,7 +12,7 @@
     (property "Datasheet" "http://www.xlitx.com/datasheet/2381AW.pdf" (at 0 -12.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_keywords" "3-digit LED seven-segment XLITX" (at 0 0 0)
+    (property "ki_keywords" "3-digit LED seven-segment XLITX CL2832AW" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_description" "Three Digit 7-segment LED Display, 0.28-inch digit height, common cathode" (at 0 0 0)
