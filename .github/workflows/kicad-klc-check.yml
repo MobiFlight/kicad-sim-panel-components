@@ -2,17 +2,15 @@ name: "KLC Compliance Check"
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  # and if relevant files have changed, including this GitHub action files
+  # and if relevant files have changed
   push:
     branches: [ "main" ]
     paths: 
       - "SimPanel.pretty/*.kicad_mod"
-      - ".github/workflows/kicad-klc-check.yml"
   pull_request:
     branches: [ "main" ]
     paths: 
       - "SimPanel.pretty/*.kicad_mod"
-      - ".github/workflows/kicad-klc-check.yml"
 
 jobs:
   KLC_ComplianceCheck:
