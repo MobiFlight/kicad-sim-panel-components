@@ -43,6 +43,6 @@ jobs:
           readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
           for changed_file in ${changed_files[@]}; do
             if [[ ${changed_file} == *.kicad_mod ]]; then
-              python ./library-utils/klc-check/check_footprint.py ./SimPanel.pretty/${changed_file} -vv
+              python ./library-utils/klc-check/check_footprint.py ./${changed_file} -vv
             fi
           done
