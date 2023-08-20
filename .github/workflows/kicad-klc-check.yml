@@ -1,4 +1,4 @@
-name: CI
+name: "KLC Compliance Check"
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -24,4 +24,4 @@ jobs:
           python-version: '3.10.11'
 
       - name: Run KiCad KLC Footprint Check
-        run: python  ./library-utils\klc-check\check_footprint.py ./SimPanel.pretty/*
+        run: python ./library-utils/klc-check/check_footprint.py ./SimPanel.pretty/*
