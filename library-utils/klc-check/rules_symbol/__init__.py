@@ -1,0 +1,41 @@
+def get_all_symbol_rules():
+    # without this delayed import, the rules could not import our sub-modules (e.g. `rule`)
+    from . import (
+        G1_1,
+        G1_7,
+        S3_1,
+        S3_2,
+        S3_3,
+        S3_6,
+        S4_1,
+        S4_2,
+        S4_3,
+        S4_4,
+        S4_5,
+        S4_6,
+        S5_1,
+        S5_2,
+        S6_2,
+        S7_1,
+        S7_2,
+    )
+
+    return {
+        "G1.1": G1_1,
+        "G1.7": G1_7,
+        "S3.1": S3_1,
+        "S3.2": S3_2,
+        "S3.3": S3_3,
+        "S3.6": S3_6,
+        "S4.1": S4_1,
+        "S4.2": S4_2,
+        "S4.3": S4_3,
+        "S4.4": S4_4,
+        "S4.5": S4_5,
+        "S4.6": S4_6,
+        "S5.1": S5_1,
+        "S5.2": S5_2,
+        "S6.2": S6_2,
+        "S7.1": S7_1,
+        "S7.2": S7_2,
+    }
