@@ -27,7 +27,7 @@
   (pad "11" thru_hole circle (at -3.81 -3.81) (size 1.524 1.524) (drill 0.914) (layers "*.Cu" "*.Mask") (tstamp 44a7d00c-1661-46d7-8edc-db741510afa5))
   (pad "12" thru_hole circle (at -6.35 -3.81) (size 1.524 1.524) (drill 0.914) (layers "*.Cu" "*.Mask") (tstamp 26c71cb6-9d74-498d-a51c-fe49844e9234))
   (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/2381AW.step"
-    (offset (xyz 0 0 0))
+    (offset (xyz 0 0 1.1))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
