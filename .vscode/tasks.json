@@ -4,6 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "KLC - Check Symbols",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                ".\\library-utils\\klc-check\\check_symbol.py",
+                ".\\SimPanel.kicad_sym",
+                "-vv"
+            ],
+            "problemMatcher": []
+        },
+        {
             "label": "KLC - Check Footprints",
             "type": "shell",
             "command": "python",
