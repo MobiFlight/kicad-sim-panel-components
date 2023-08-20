@@ -27,7 +27,7 @@ jobs:
       # We use this to limit KLC checking to only changed files
       - id: footprint_files
         name: Get Changed Files
-        uses: jitterbit/get-changed-files@v1
+        uses: masesgroup/retrieve-changed-files@v2
         with:
           format: 'json'
       
