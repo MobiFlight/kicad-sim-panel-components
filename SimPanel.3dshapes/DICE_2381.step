@@ -9,7 +9,7 @@ FILE_DESCRIPTION(
 /* implementation_level */ '2;1');
 
 FILE_NAME(
-/* name */ '2381AW.step',
+/* name */ 'DICE_2381.step',
 /* time_stamp */ '2023-08-20T01:04:13-05:00',
 /* author */ (''),
 /* organization */ (''),

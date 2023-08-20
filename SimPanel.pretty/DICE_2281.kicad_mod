@@ -11,8 +11,8 @@
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp e2773eaa-c785-42ab-8a22-e40808838bc0)
   )
-  (fp_text user "${REFERENCE}" (at -0.449762 -3.20825 unlocked) (layer "F.Fab")
-      (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
+  (fp_text user "${REFERENCE}" (at 5.08 -3.175 unlocked) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)) (justify bottom))
     (tstamp e6994cd0-c2bf-40cd-880a-cf15fcb799cd)
   )
   (fp_rect (start -2.53 -8.92) (end 12.69 1.3)
@@ -31,7 +31,7 @@
   (pad "8" thru_hole circle (at 5.08 -7.62) (size 1.524 1.524) (drill 0.914) (layers "*.Cu" "*.Mask") (tstamp a44af144-2690-4609-ac46-d1d640849f84))
   (pad "9" thru_hole circle (at 2.54 -7.62) (size 1.524 1.524) (drill 0.914) (layers "*.Cu" "*.Mask") (tstamp 44a7d00c-1661-46d7-8edc-db741510afa5))
   (pad "10" thru_hole circle (at 0 -7.62) (size 1.524 1.524) (drill 0.914) (layers "*.Cu" "*.Mask") (tstamp 26c71cb6-9d74-498d-a51c-fe49844e9234))
-  (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/2281AW.step"
+  (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/DICE_2281.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
