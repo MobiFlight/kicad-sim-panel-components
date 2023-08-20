@@ -6,10 +6,12 @@ on:
   push:
     branches: [ "main" ]
     paths: 
+      - "SimPanel.kicad_sym"
       - "SimPanel.pretty/*.kicad_mod"
   pull_request:
     branches: [ "main" ]
     paths: 
+      - "SimPanel.kicad_sym"
       - "SimPanel.pretty/*.kicad_mod"
 
 jobs:
@@ -30,7 +32,12 @@ jobs:
         uses: masesgroup/retrieve-changed-files@v2
         with:
           format: 'json'
+
+      # We must check all symbols for compliance, since KiCad stores each library in a single file
+      - name: KLC Symbol Check
+        run: python ./library-utils/klc-check/check_symbol.py ./SimPanel.kicad_sym -vv
       
+      # We only check footprints where the underlying file has changed
       - name: KLC Footprint Check
         run: |
             readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
