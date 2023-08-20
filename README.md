@@ -2,6 +2,11 @@
 
 Welcome to the KiCad Sim-Panel Library repository! This collection is dedicated to providing KiCad symbols, footprints, and 3D models tailored to the unique requirements of Sim-Panel PCBs. These resources will simplify the process of designing and building your custom Sim-Panel PCBs.
 
+We aim to achieve compliance with the [KiCad Library Convention (KLC)](https://klc.kicad.org/) with all our components, with the exception of:
+ - F9.3, since 3D Model paths are allowed to: 
+   - start with `${KICAD_SIMPANEL_DIR}/` in lieu of `${KICAD7_3DMODEL_DIR}/` since they are intended for local use
+   - be in a STEP format (either WRL or STEP are acceptable)
+
 ## What's Inside
 
 ### KiCad Symbols
