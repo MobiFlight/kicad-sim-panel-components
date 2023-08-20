@@ -33,7 +33,7 @@ jobs:
         with:
           format: 'json'
       
-      - name: Run KiCad KLC Footprint Check
+      - name: KLC Footprint Check
         run: |
             readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
             for changed_file in ${changed_files[@]}; do
