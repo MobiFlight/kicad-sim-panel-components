@@ -112,6 +112,8 @@ class Rule(KLCRule):
         # more checks for non power or non graphics symbol
         if (not self.component.is_graphic_symbol()) and (
             not self.component.is_power_symbol()
+        ) and (
+            self.component.extends is None # Only check for presence of Datasheet for non-derived components
         ):
             # Datasheet field must not be empty
             if ds.value == "":
