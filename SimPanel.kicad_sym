@@ -569,6 +569,9 @@
     (property "ki_description" "Alps 15 Pulse Incremental Mechanical Rotary Encoder with a 3.5 (Inner Shaft) mm, 6 (Outer Shaft) mm" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "ki_fp_filters" "EC11EBB24C03*" (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (symbol "EC11EBB24C03_0_0"
       (pin passive line (at 0 0 0) (length 5.08)
         (name "A1" (effects (font (size 1.27 1.27))))
