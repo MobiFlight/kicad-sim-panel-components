@@ -22,7 +22,7 @@ Fully specified symbols should be named after the NPM (manufacturer part number)
 
 If a component has multiple variants that use the same symbol, create the common symbol first, using a naming convention that generalizes the part number, then create derived symbols that are named after the full part number.
 
-Often, generalizing the part number can be achieved by simply including a subset of the name (starting with the first character). For example, derived parts TL6275AA2PQNY and TL6275BA2PQNY both share the same parent part, named TL6275, from which they are derived. This shortened name used for parent symbol, will often match the "series" naming convention used by the manufacturer.
+Often, generalizing the part number can be achieved by simply including a subset of the name (starting with the first character). For example, derived parts TL6275A and TL6275B both share the same parent part, named TL6275, from which they are derived. This shortened name used for parent symbol, will often match the "series" naming convention used by the manufacturer.
 
 Alternatively, lowercase 'x' characters can be used in as placeholders in the parent symbol if an appropriate substring isn't readily available. e.g. A parent symbol could be named ABC-1X55 if has the derived parts of ABC-1055, ABC-1155, ABC-1255, etc.
 
