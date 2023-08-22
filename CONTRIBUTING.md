@@ -8,7 +8,7 @@ Building simulator panels can be a rewarding challenge, and we hope this library
 
 Before you dive into contributing, please take a moment to read through this guide. It outlines our expectations and provides important information about the contribution process. Following these guidelines will help us review and merge your contributions more efficiently.
 
-Contributing to this project assumes you have some basic understanding of the [KiCad Library Convention (KLC)](https://klc.kicad.org/). If not, don't fret! You can gain some useful insight into your symbols and footprints' KLC complaince by adding your changes to a local instance of this repository and executing the modified KLC Compliance Checks.
+Contributing to this project assumes you have some basic understanding of the [KiCad Library Convention (KLC)](https://klc.kicad.org/). If not, don't fret! You can gain some useful insight into your symbols and footprints' KLC compliance by adding your changes to a local instance of this repository and executing the modified KLC Compliance Checks, described in further detail below.
 
 ## Symbol Naming Strategy
 
