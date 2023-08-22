@@ -8,17 +8,17 @@ Fully specified symbols should be named after the NPM (manufacturer part number)
 
 ### Component Variants
 
-If a component has multiple variants that use the same symbol, create the common symbol first, using a naming convention that generalizes the part number, then create dervied symbols that are named after the full part number.
+If a component has multiple variants that use the same symbol, create the common symbol first, using a naming convention that generalizes the part number, then create derived symbols that are named after the full part number.
 
-Often, generalizing the part number can be achieved by simply including a subset of the name (starting with the first character). For example, derived parts TL6275AA2PQNY and TL6275BA2PQNY both share the same parent part, named TL6275, from which they are derived. This shorted name used for parent symbol, will often match the "series" naming convention used by the manufacturer.
+Often, generalizing the part number can be achieved by simply including a subset of the name (starting with the first character). For example, derived parts TL6275AA2PQNY and TL6275BA2PQNY both share the same parent part, named TL6275, from which they are derived. This shortened name used for parent symbol, will often match the "series" naming convention used by the manufacturer.
 
-Alternatively, lower cases "x" characters can be used in as placeholders in the parent symbol if an appropriate substring isn't readily available. e.g. A parent symbol could be named ABC-1X55 if has the derived parts of ABC-1055, ABC-1155, ABC-1255, etc.
+Alternatively, lowercase 'x' characters can be used in as placeholders in the parent symbol if an appropriate substring isn't readily available. e.g. A parent symbol could be named ABC-1X55 if has the derived parts of ABC-1055, ABC-1155, ABC-1255, etc.
 
 ### Datasheets
 
-Datasheet references in symbols should point to the manufacturer's URL, if available.
+Datasheet references in symbols should point to the manufacturer's URL when available.
 
-In some instances, parts are purchased from a vendor that provides little information regarding the original manufacturer and will provide their own version of the component datasheet. In these instances, the datasheet file should be added to the `/datasheets` folder in this repo and reference the datasheet in the symbol using the `{KICAD_SIMPANEL_DIR}/` prefix.
+In some instances, parts are purchased from a vendor that provides little information regarding the original manufacturer and will provide their own version of the component datasheet. In these instances, the datasheet file should be added to the `/datasheets` folder in this repository. The symbol should then reference the datasheet using the `${KICAD_SIMPANEL_DIR}/` prefix.
 
 ## Footprint Requirements
 
@@ -30,11 +30,11 @@ Changes to this library can be requested by creating a pull request.
 
 Prior to creating a pull request, please execute the modified KLC Compliance Checks (included in this repository) in your local environment. Additional details on how to execute these checks are described below.
 
-When creating a pull request, GitHub will excecute the modified KLC Compliance Checks. If any checks produce a error of warning, the GitHub action will indicate failure.
+When creating a pull request, GitHub will execute the modified KLC Compliance Checks. If any checks produce an error or warning, the GitHub action will indicate failure.
 
 ## KLC Compliance Checks
 
-Python scripts are included in this repository to check symbols and footprints for complaince with a modified version the KiCad Library Converion (KLC).
+Python scripts are included in this repository to check symbols and footprints for compliance with a modified version the KiCad Library Convention (KLC).
 
 A few checks are modified or disabled, typically because they conflict with a strategy implemented by the components in this repo. A full listing of the KLC rule exclusions and their reasoning is listed below.
 
@@ -76,4 +76,3 @@ python .\library-utils\klc-check\check_symbol.py .\SimPanel.kicad_sym -vv
 ```shell
 python .\library-utils\klc-check\check_footprint.py .\SimPanel.pretty\\* -vv
 ```
-
