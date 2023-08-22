@@ -26,7 +26,7 @@ Footprints are vital for the PCB design process. They are patterns of pads, hole
 2. In KiCad, go to "Preferences" and select "Configure Paths"
 3. Add a new environment variable with the name `KICAD_SIMPANEL_DIR` and the path to this cloned repository on your local machine.
 
-![image](https://github.com/ssewell/kicad-sim-panel-components/assets/2242776/5b1cd322-5240-435d-997c-46c8f860d4ab)
+![image](https://github.com/ssewell/kicad-sim-panel-components/assets/2242776/022251e2-1752-44ad-8d4b-ee7600452a1f)
 
 ### Configure Symbols
 
