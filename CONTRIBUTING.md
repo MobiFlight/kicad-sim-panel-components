@@ -16,7 +16,7 @@ If the component has an LCSC part number available, include a field in the symbo
 
 ### Fully Specified Symbols
 
-Fully specified symbols should be named after the NPM (manufacturer part number) and include the full part number (for atomic components) or a partial part number (for fully specified symbols, e.g. has multiple variants and are _not_ atomic).
+Fully specified symbols should be named after the NPM (manufacturer part number) and include the functional portion of the part number. See [KLC S2.2](https://klc.kicad.org/symbol/s2/s2.2/)
 
 ### Component Variants
 
