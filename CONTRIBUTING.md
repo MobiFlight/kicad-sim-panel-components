@@ -12,7 +12,7 @@ Contributing to this project assumes you have some basic understanding of the [K
 
 ## Symbol Naming Strategy
 
-If the component has an LCSC part number available, include a field in the symbol that uses the Name `LCSC Part #` and indicate corresponding part number in the corresponding value.
+If the component has an LCSC part number available, include a field in the symbol that uses the Name `LCSC Part #` and indicate the part number in the corresponding value.
 
 ### Fully Specified Symbols
 
