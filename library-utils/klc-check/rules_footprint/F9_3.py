@@ -6,7 +6,7 @@ from kicad_mod import KicadMod
 from rulebase import isValidName
 from rules_footprint.rule import KLCRule
 
-SYSMOD_PREFIX = "${KICAD7_3DMODEL_DIR}/"
+SYSMOD_PREFIX = "${KICAD_SIMPANEL_DIR}/"
 OLD_SYSMOD_PREFIX_RE = r"^(\$\{KICAD[0-6]_3DMODEL_DIR\})/"
 
 
@@ -97,18 +97,18 @@ class Rule(KLCRule):
         self.model3D_wrongFiletype = False
         self.model3D_invalidName = False
 
-        # if model.startswith(SYSMOD_PREFIX):
-        #     model = model.replace(SYSMOD_PREFIX, "")
-        # elif (m := re.search(OLD_SYSMOD_PREFIX_RE, model)):
-        #     self.model3D_oldSYSMOD = True
-        #     self.needsFixMore = True
-        #     self.error(f"Model path starts with outdated prefix '{m[1]}/'; it should start with '{SYSMOD_PREFIX}'")
-        #     error = True
-        #     model = model.replace(m[1], "")
-        # else:
-        #     self.model3D_missingSYSMOD = True
-        #     self.needsFixMore = True
-        #     self.warning("Model path should start with '" + SYSMOD_PREFIX + "'")
+        if model.startswith(SYSMOD_PREFIX):
+            model = model.replace(SYSMOD_PREFIX, "")
+        elif (m := re.search(OLD_SYSMOD_PREFIX_RE, model)):
+            self.model3D_oldSYSMOD = True
+            self.needsFixMore = True
+            self.error(f"Model path starts with outdated prefix '{m[1]}/'; it should start with '{SYSMOD_PREFIX}'")
+            error = True
+            model = model.replace(m[1], "")
+        else:
+            self.model3D_missingSYSMOD = True
+            self.needsFixMore = True
+            self.warning("Model path should start with '" + SYSMOD_PREFIX + "'")
 
         model_split = model.split("/")
         if len(model_split) <= 1:
