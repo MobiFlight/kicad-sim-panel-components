@@ -45,7 +45,7 @@ Once added, you can access these resources from within KiCad as you design your 
 
 ## Contribution
 
-We encourage contributions from the community to enhance and expand this library. If you've created symbols, footprints, or 3D models that could be beneficial for Sim-Panel PCBs, please open a pull request or contact us to discuss adding them to the repository.
+We encourage contributions from the community to enhance and expand this library. If you have created KiCad symbols, footprints, or 3D models that could be beneficial for Sim-Panel PCBs, please see our [Contributing](CONTRIBUTING.md) documentation.
 
 ## License
 
