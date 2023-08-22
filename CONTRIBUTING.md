@@ -1,3 +1,17 @@
+# Contributing
+
+Hello and welcome! 🌟
+
+First of all, we want to express our heartfelt gratitude for your interest in contributing to this project. Open source thrives on the collaborative efforts of individuals like you, and we're excited to have you. Your contributions, big or small, help us improve this project and make it more beneficial for everyone.
+
+Building simulator panels can be a rewarding challenge, and we hope this library will make you more productive when building your sim-panel PCBs with KiCad.
+
+Before you dive into contributing, please take a moment to read through this guide. It outlines our expectations and provides important information about the contribution process. Following these guidelines will help us review and merge your contributions more efficiently.
+
+Simbuilder and KiCad users thank you for helping make this project even better!
+
+Contributing to this project assumes you have some basic understanding of the [KiCad Library Convention (KLC)](https://klc.kicad.org/). If not, don't fret! You can gain some useful insight into your symbols and footprints' KLC complaince by adding your changes to a local instance of this repository and executing the modified KLC Compliance Checks.
+
 ## Symbol Naming Strategy
 
 If the component has an LCSC part number available, include a field in the symbol that uses the Name `LCSC Part #` and indicate corresponding part number in the corresponding value.
