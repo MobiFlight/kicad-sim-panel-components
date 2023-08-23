@@ -96,8 +96,8 @@
       f29e4a3b-3202-4d9c-823f-49b9f039520b
     )
   )
-  (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/Dual_Axis_Encoder_With_Switch_EC11EBB24C03_.step"
-    (offset (xyz 0 0 0))
+  (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/EC11EBB24C03.step"
+    (offset (xyz 2.5 7.9 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
