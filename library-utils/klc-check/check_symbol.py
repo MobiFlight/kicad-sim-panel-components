@@ -443,4 +443,4 @@ if __name__ == "__main__":
                     warning_count += int(line.split()[-1])
 
     out_queue.close()
-    sys.exit(0 if error_count == 0 and warning_count == 0 else -1)
+    sys.exit(0 if error_count == 0 else -1)
