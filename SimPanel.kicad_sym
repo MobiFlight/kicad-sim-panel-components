@@ -655,7 +655,7 @@
     (property "ki_description" "Light emitting diode" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_fp_filters" "LED* LED_SMD:*" (at 0 0 0)
+    (property "ki_fp_filters" "LED*" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "LED_HL-A-3528H343W-S1-13HL-HR3_0_1"
