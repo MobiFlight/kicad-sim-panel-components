@@ -39,7 +39,7 @@ See the [KiCad Library Convention (KLC)](https://klc.kicad.org/), noting the KLC
 ## Source files for 3D Models
 When submitting 3D models, include the source file from which the `.step` or `.wrl` file was derived in the `SimPanel.3dshapesSource` folder. The source file should use the exact name as the KiCad 3D model (except for the extension) and provided in the native format of the application from which the 3D model was derived (e.g. `.fcstd` for Freecad or `.f3d` for Fusion 360). This allows ongoing modifications or corrections to the model without compromising its integrity.
 
-please provide both the `.wrl` and `.step` versions of the model, and use the `.wrl` version as a reference in the footprint. If you can only provide one, either a `.wrl` or `.step`, then reference that particular version in the footprint.
+Please provide both the `.wrl` and `.step` versions of the model, and use the `.wrl` version as a reference in the footprint. If you can only provide one, either a `.wrl` or `.step`, then reference that particular version in the footprint.
 
 ## Submitting Changes
 
@@ -62,7 +62,7 @@ A few checks are modified or disabled, typically because they conflict with a st
 | [F9.3](https://klc.kicad.org/footprint/f9/f9.3/) | 7          | Modified                 | Model paths must start with `${KICAD_SIMPANEL_DIR}/` in lieu of `${KICAD7_3DMODEL_DIR}/` since they are intended for local use                                                                                            |
 | [F9.3](https://klc.kicad.org/footprint/f9/f9.3/) | 8          | Modified                 | 3D model file type can be in either `.wrl` or `.step`. Unlike the standard KLC, which requires `.wrl`, the `.step` format can be used exclusively as the `AP214 STEP` format includes both geometry and color infomation. |
 | [S6.2](https://klc.kicad.org/symbol/s6/s6.2/) | 4          | Modified                 | Since derived symbols inherit fields unless overridden, it is acceptable to populate a common datasheet in the parent symbol and leave derived symbols empty                                                              |
-| [F7.3](https://klc.kicad.org/footprint/f7/f7.3/) |           | Disabled                 | Only relevant for symmetrical footprints                                                              |
+| [F7.3](https://klc.kicad.org/footprint/f7/f7.3/) |           | Excluded                 | Only relevant for symmetrical footprints                                                              |
 
 ## Executing KLC Compliance Checks
 
