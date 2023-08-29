@@ -633,11 +633,11 @@
       )
     )
   )
-  (symbol "LED_HL-A-3528H343W-S1-13HL-HR3" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+  (symbol "HL-A-3528H343W-S1-13HL-HR3" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
     (property "Reference" "$REF" (at 1.5875 -5.08 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "LED" (at 1.5875 -2.54 0)
+    (property "Value" "HL-A-3528H343W-S1-13HL-HR3" (at 1.5875 -2.54 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "SimPanel:LED_HL-A-3528H343W-S1-13HL-HR3" (at 0 2.54 0)
@@ -652,13 +652,13 @@
     (property "ki_keywords" "LED diode" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_description" "Light emitting diode" (at 0 0 0)
+    (property "ki_description" "SMD led that works for backlight of pcb panels" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_fp_filters" "LED*" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (symbol "LED_HL-A-3528H343W-S1-13HL-HR3_0_1"
+    (symbol "HL-A-3528H343W-S1-13HL-HR3_0_1"
       (polyline
         (pts
           (xy -1.27 -1.27)
@@ -708,7 +708,7 @@
         (fill (type none))
       )
     )
-    (symbol "LED_HL-A-3528H343W-S1-13HL-HR3_1_1"
+    (symbol "HL-A-3528H343W-S1-13HL-HR3_1_1"
       (pin passive line (at -3.81 0 0) (length 2.54)
         (name "K" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 1.27 1.27))))
