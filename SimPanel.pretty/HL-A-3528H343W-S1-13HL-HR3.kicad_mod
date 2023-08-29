@@ -43,8 +43,8 @@
     (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp e6cff830-7f9d-4463-a48f-c9cea0027f0f))
   (fp_line (start 1.75 1.4) (end -1.75 1.4)
     (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 69ee90c3-e5ee-4fd8-b8dd-a841f2f4201e))
-  (pad "1" smd roundrect (at -0.9 0) (size 2.2 2.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.02272727273) (tstamp 1d138c05-f04e-44a0-be0f-17ec92eb5b15))
-  (pad "2" smd roundrect (at 1.375 0) (size 1.25 2.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.04) (tstamp db5d2d9a-a0fd-4310-9d5f-aa83ef54b597))
+  (pad "1" smd roundrect (at -0.9 0) (size 2.2 2.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.02727272727) (tstamp 1d138c05-f04e-44a0-be0f-17ec92eb5b15))
+  (pad "2" smd roundrect (at 1.375 0) (size 1.25 2.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.048) (tstamp db5d2d9a-a0fd-4310-9d5f-aa83ef54b597))
   (model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/HL-A-3528H343W-S1-13HL-HR3.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
