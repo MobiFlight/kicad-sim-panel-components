@@ -3,7 +3,7 @@
   (descr "Two Digit 7-segment LED Display, 0.28-inch digit height, common cathode")
   (tags "2-digit LED seven-segment XLITX CL2821AW")
   (attr through_hole)
-  (fp_text reference "REF**" (at -3.302 -3.81 90) (layer "F.SilkS")
+  (fp_text reference "Broken" (at -3.302 -3.81 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 6eea97c1-ba75-441c-9dfe-c085cfecb9d4)
   )
