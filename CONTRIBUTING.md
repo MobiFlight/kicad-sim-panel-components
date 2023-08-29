@@ -49,6 +49,8 @@ Prior to creating a pull request, please execute the modified KLC Compliance Che
 
 When creating a pull request, GitHub will execute the modified KLC Compliance Checks. If any checks produce an error or warning, the GitHub action will indicate failure.
 
+⚠️ Important: If you receive an error in the automated compliance check on GitHub: `Error: The head commit for this pull_request event is not ahead of the base commit`, you need to ensure your current feature branch referenced in the Pull Request is up-to-date. Either rebase or merge origin `main` changes into your feature branch, then push the updates to fix this issue.
+
 ## KLC Compliance Checks
 
 Python scripts are included in this repository to check symbols and footprints for compliance with a modified version the KiCad Library Convention (KLC).
