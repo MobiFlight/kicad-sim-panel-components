@@ -8,11 +8,11 @@
   (property "ki_description" "Push button switch, generic, two pins")
   (property "ki_keywords" "switch normally-open pushbutton push-button")
   (attr smd)
-  (fp_text reference "SW1" (at 0 -4.05) (layer "F.SilkS") hide
+  (fp_text reference "REF**" (at 0 -4.05) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp e16b61d0-e32d-4923-8810-4d2a07a101d7)
   )
-  (fp_text value "SW_Push" (at 0 4.15) (layer "F.Fab")
+  (fp_text value "KSC241JLFS" (at 0 4.15) (layer "F.Fab")
       (effects (font (size 1 1) (thickness 0.15)))
     (tstamp 889fb74b-2fab-4fe4-93c6-bf54ed30b8b2)
   )
