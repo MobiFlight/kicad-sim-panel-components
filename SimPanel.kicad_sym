@@ -835,7 +835,7 @@
         (name "GND" (effects (font (size 1.27 1.27))))
         (number "13" (effects (font (size 1.27 1.27))))
       )
-      (pin bidirectional line (at 10.16 10.16 180) (length 2.54)
+      (pin input line (at 10.16 10.16 180) (length 2.54)
         (name "~{OE}" (effects (font (size 1.27 1.27))))
         (number "22" (effects (font (size 1.27 1.27))))
       )
