@@ -720,7 +720,7 @@
     )
   )
   (symbol "SN74LVC4245APWR" (in_bom yes) (on_board yes)
-    (property "Reference" "U" (at 7.62 16.51 0)
+    (property "Reference" "U" (at 7.62 16.51 0) (do_not_autoplace)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "SN74LVC4245APWR" (at 0 -27.94 0)
