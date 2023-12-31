@@ -914,7 +914,7 @@
     (property "Value" "T80-Z1" (at 0 -5.08 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "SimPanelTemp:SW_T80-Z1" (at 0 0 0)
+    (property "Footprint" "SimPanel:T80-Z1" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 0 0 0)
@@ -924,6 +924,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "ki_description" "Toggle Switch with large handle, SPDT (all variants)" (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "T80*Z1*" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "T80-Z1_0_0"
