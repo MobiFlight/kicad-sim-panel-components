@@ -630,7 +630,7 @@
     )
   )
   (symbol "HL-A-3528H343W-S1-13HL-HR3" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-    (property "Reference" "$REF" (at 1.5875 -5.08 0)
+    (property "Reference" "BL" (at 1.5875 -5.08 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "HL-A-3528H343W-S1-13HL-HR3" (at 1.5875 -2.54 0)
