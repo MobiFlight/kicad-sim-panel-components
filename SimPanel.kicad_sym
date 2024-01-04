@@ -651,7 +651,7 @@
     (property "ki_description" "SMD led that works for backlight of pcb panels" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ki_fp_filters" "HL-A-3528*" (at 0 0 0)
+    (property "ki_fp_filters" "HL?A?3528*" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "HL-A-3528H343W-S1-13HL-HR3_0_1"
