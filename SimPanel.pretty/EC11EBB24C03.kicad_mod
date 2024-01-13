@@ -1,6 +1,6 @@
 (footprint "EC11EBB24C03" (version 20221018) (generator pcbnew)
   (layer "F.Cu")
-  (descr "EC11E")
+  (descr "EC11E Dual Rotary Encoder")
   (tags "Undefined or Miscellaneous")
   (property "Arrow Part Number" "")
   (property "Arrow Price/Stock" "")
