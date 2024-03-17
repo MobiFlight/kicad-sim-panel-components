@@ -64,8 +64,8 @@ class Rule(KLCRule):
                         )
                         fail = True
 
-                    if not self.footprints_dir :
-                        self.warning("footprint existence is not going to be checked if --footprint is not specified")
+                    # if not self.footprints_dir :
+                    #     self.warning("footprint existence is not going to be checked if --footprint is not specified")
 
                     # Check that the footprint exists!
                     if not fail and self.footprints_dir:
@@ -102,8 +102,8 @@ class Rule(KLCRule):
                                             l=fp_dir, f=fp_path
                                         )
                                     )
-                        else:
-                            self.error("'%s' doesn't exist, check --footprints arg" % self.footprints_dir)
+                        # else:
+                        #     self.error("'%s' doesn't exist, check --footprints arg" % self.footprints_dir)
 
                     for filt in filters:
                         match1 = fnmatch.fnmatch(fp_path, filt)
