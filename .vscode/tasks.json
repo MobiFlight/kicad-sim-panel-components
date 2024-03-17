@@ -5,12 +5,17 @@
   "tasks": [
     {
       "label": "KLC - Check All",
-      "dependsOn": ["KLC - Check Symbols", "KLC - Check Footprints"],
+      "dependsOn": [
+        "KLC - Check Symbols (SimPanel)",
+        "KLC - Check Footprints (SimPanel)",
+        "KLC - Check Symbols (Kav Simulations)",
+        "KLC - Check Footprints (Kav Simulations)"
+      ],
       "dependsOrder": "sequence",
       "problemMatcher": []
     },
     {
-      "label": "KLC - Check Symbols",
+      "label": "KLC - Check Symbols (SimPanel)",
       "type": "shell",
       "command": "python",
       "args": [
@@ -21,12 +26,34 @@
       "problemMatcher": []
     },
     {
-      "label": "KLC - Check Footprints",
+      "label": "KLC - Check Footprints (SimPanel)",
       "type": "shell",
       "command": "python",
       "args": [
         ".\\library-utils\\klc-check\\check_footprint.py",
         ".\\SimPanel.pretty\\*",
+        "-vv"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "KLC - Check Symbols (Kav Simulations)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        ".\\library-utils\\klc-check\\check_symbol.py",
+        ".\\Kav_Simulations.kicad_sym",
+        "-vv"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "KLC - Check Footprints (Kav Simulations)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        ".\\library-utils\\klc-check\\check_footprint.py",
+        ".\\Kav_Simulations.pretty\\*",
         "-vv"
       ],
       "problemMatcher": []

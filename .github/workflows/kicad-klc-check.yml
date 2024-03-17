@@ -4,45 +4,51 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   # and if relevant files have changed
   push:
-    branches: [ "main" ]
-    paths: 
+    branches: ["main"]
+    paths:
       - "SimPanel.kicad_sym"
+      - "Kav_Simulations.kicad_sym"
       - "SimPanel.pretty/*.kicad_mod"
+      - "Kav_Simulations.pretty/*.kicad_mod"
   pull_request:
-    branches: [ "main" ]
-    paths: 
+    branches: ["main"]
+    paths:
       - "SimPanel.kicad_sym"
+      - "Kav_Simulations.kicad_sym"
       - "SimPanel.pretty/*.kicad_mod"
+      - "Kav_Simulations.pretty/*.kicad_mod"
 
 jobs:
   KLC_ComplianceCheck:
     runs-on: ubuntu-latest
 
-    steps:      
+    steps:
       - uses: actions/checkout@v3
 
       - name: Setup Python
         uses: actions/setup-python@v4.7.0
         with:
-          python-version: '3.10.11'
+          python-version: "3.10.11"
 
       # We use this to limit KLC checking to only changed files
       - id: footprint_files
         name: Get Changed Files
         uses: masesgroup/retrieve-changed-files@v2
         with:
-          format: 'json'
+          format: "json"
 
       # We must check all symbols for compliance, since KiCad stores each library in a single file
       - name: KLC Symbol Check
-        run: python ./library-utils/klc-check/check_symbol.py ./SimPanel.kicad_sym -vv
-      
+        run: |
+          python ./library-utils/klc-check/check_symbol.py ./SimPanel.kicad_sym -vv
+          python ./library-utils/klc-check/check_symbol.py ./Kav_Simulations.kicad_sym -vv
+
       # We only check footprints where the underlying file has changed
       - name: KLC Footprint Check
         run: |
-            readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
-            for changed_file in ${changed_files[@]}; do
-              if [[ ${changed_file} == *.kicad_mod ]]; then
-                python ./library-utils/klc-check/check_footprint.py ./${changed_file} -vv
-              fi
-            done
+          readarray -t changed_files <<<"$(jq -r '.[]' <<<'${{ steps.footprint_files.outputs.added_modified }}')"
+          for changed_file in ${changed_files[@]}; do
+            if [[ ${changed_file} == *.kicad_mod ]]; then
+              python ./library-utils/klc-check/check_footprint.py ./${changed_file} -vv
+            fi
+          done
