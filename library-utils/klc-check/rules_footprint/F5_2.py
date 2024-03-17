@@ -185,6 +185,11 @@ class Rule(KLCRule):
         # if not pos['orientation'] == 0:
         #    errors.append("RefDes on F.Fab layer should be horizontal (no rotation)")
 
+        # Check if locked (upright orientation) is checked
+        lock_status = ref['pos']['lock']
+        if not lock_status == 'locked':
+            errors.append("RefDes on F.Fab layer should be locked (upright orientation)")
+
         if errors:
             self.error("RefDes errors")
             for err in errors:

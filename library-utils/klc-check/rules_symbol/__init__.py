@@ -18,6 +18,7 @@ def get_all_symbol_rules():
         S6_2,
         S7_1,
         S7_2,
+        EC03,
     )
 
     return {
@@ -38,4 +39,5 @@ def get_all_symbol_rules():
         "S6.2": S6_2,
         "S7.1": S7_1,
         "S7.2": S7_2,
+        "EC03": EC03,
     }

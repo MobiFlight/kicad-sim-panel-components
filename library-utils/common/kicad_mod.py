@@ -214,44 +214,49 @@ class KicadMod:
     def _getText(self, which_text) -> List[Any]:
         result = []
 
-        for text in self._getArray(self.sexpr_data, "fp_text"):
-            if text[1] == which_text:
-                text_dict = {}
-                text_dict[which_text] = text[2]
+        for propertykey in ["fp_text", "property"]:
+            for text in self._getArray(self.sexpr_data, propertykey):
+                if text[1] == which_text or text[1].lower() == which_text:
+                    text_dict = {}
+                    text_dict[which_text] = text[2]
 
-                # text position
-                a = self._getArray(text, "at")[0]
-                text_dict["pos"] = {"x": a[1], "y": a[2], "orientation": 0}
-                if len(a) > 3:
-                    text_dict["pos"]["orientation"] = a[3]
+                    # text position
+                    a = self._getArray(text, "at")[0]
+                    text_dict["pos"] = {"x": a[1], "y": a[2], "orientation": 0, "lock": 'locked'}
+                    if len(a) > 3:
+                        text_dict["pos"]["orientation"] = a[3]
+                        if text_dict["pos"]["orientation"] == 'unlocked':
+                            text_dict["pos"]["lock"] = a[3]
+                    if len(a) > 4 :
+                        text_dict["pos"]["lock"] = a[4]
 
-                # text layer
-                a = self._getArray(text, "layer")[0]
-                text_dict["layer"] = a[1]
+                    # text layer
+                    a = self._getArray(text, "layer")[0]
+                    text_dict["layer"] = a[1]
 
-                # text font
-                font = self._getArray(text, "font")[0]
+                    # text font
+                    font = self._getArray(text, "font")[0]
 
-                # Some footprints miss out some parameters
-                text_dict["font"] = {"thickness": 0, "height": 0, "width": 0}
+                    # Some footprints miss out some parameters
+                    text_dict["font"] = {"thickness": 0, "height": 0, "width": 0}
 
-                for pair in font[1:]:
-                    key = pair[0]
-                    data = pair[1:]
+                    for pair in font[1:]:
+                        key = pair[0]
+                        data = pair[1:]
 
-                    if key == "thickness":
-                        text_dict["font"]["thickness"] = data[0]
+                        if key == "thickness":
+                            text_dict["font"]["thickness"] = data[0]
 
-                    elif key == "size":
-                        text_dict["font"]["height"] = data[0]
-                        text_dict["font"]["width"] = data[1]
+                        elif key == "size":
+                            text_dict["font"]["height"] = data[0]
+                            text_dict["font"]["width"] = data[1]
 
-                text_dict["font"]["italic"] = self._hasValue(a, "italic")
+                    text_dict["font"]["italic"] = self._hasValue(a, "italic")
 
-                # text hide
-                text_dict["hide"] = self._hasValue(text, "hide")
+                    # text hide
+                    text_dict["hide"] = self._hasValue(text, "hide")
 
-                result.append(text_dict)
+                    result.append(text_dict)
 
         return result
 
@@ -472,6 +477,12 @@ class KicadMod:
             # layers
             a = self._getArray(pad, "layers")[0]
             pad_dict["layers"] = a[1:]
+
+            # Property (fabrication property, e.g. pad_prop_heatsink)
+            pad_dict["property"] = None
+            a = self._getArray(pad, "property")
+            if a:
+                pad_dict["property"] = a[0][1]
 
             # rect delta
             pad_dict["rect_delta"] = {}

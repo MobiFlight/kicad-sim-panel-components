@@ -1,0 +1,103 @@
+(footprint "Pass__F6.3__smd-pad-is-rect"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "This passes, because pad 2 is rectangular, but it's a heatsink")
+	(tags "x")
+	(property "Reference" "REF**"
+		(at 0 -4.7 0)
+		(layer "F.SilkS")
+		(uuid "868d016a-d943-445a-9d9c-91cc1976bb76")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pass__F6.3__smd-pad-is-rect"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "6edca52f-91b1-435d-9e47-c31cd138d83b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2836d776-92e2-48cc-b1c9-24305be4ac22")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b54db478-735a-41ff-a8f2-ee9aee4b1562")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d1bb971e-a77a-4b76-a7b1-afaf673e1a7c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -2.413 -1.397)
+		(end 2.54 1.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "f40e1f79-0083-4f48-9311-c9002b494401")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -0.77 0)
+		(layer "F.Fab")
+		(uuid "c966285b-154a-47f5-b891-f3ceaec843c1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.397 0)
+		(size 0.635 1.397)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "daf82346-21f6-4357-ae6b-4211e5187b2c")
+	)
+	(pad "2" smd rect
+		(at 0 0)
+		(size 0.635 1.397)
+		(property pad_prop_heatsink)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e0109ee2-ac9a-4ddd-a58c-68a08efdacc3")
+	)
+)

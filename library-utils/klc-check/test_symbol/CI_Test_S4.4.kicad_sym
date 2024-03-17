@@ -1,80 +1,248 @@
-(kicad_symbol_lib (version 20220914) (generator kicad_symbol_editor)
-  (symbol "Fail__S4.4__DoubleInvertedPin" (in_bom yes) (on_board yes)
-    (property "Reference" "U" (at -6.35 11.43 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "Fail__S4.4__DoubleInvertedPin" (at 0 -10.16 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (symbol "Fail__S4.4__DoubleInvertedPin_0_1"
-      (rectangle (start -7.62 10.16) (end 6.35 -8.89)
-        (stroke (width 0.1524) (type default))
-        (fill (type none))
-      )
-    )
-    (symbol "Fail__S4.4__DoubleInvertedPin_1_1"
-      (pin passive inverted (at 6.35 1.27 0) (length 2.54)
-        (name "~{nDoubleInverted}" (effects (font (size 1.27 1.27))))
-        (number "42" (effects (font (size 1.27 1.27))))
-      )
-    )
-  )
-  (symbol "Fail__S4.4__GND_wrong_type" (in_bom yes) (on_board yes)
-    (property "Reference" "U" (at -6.35 11.43 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "Fail__S4.4__GND_wrong_type" (at 0 -10.16 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (symbol "Fail__S4.4__GND_wrong_type_0_1"
-      (rectangle (start -7.62 10.16) (end 6.35 -8.89)
-        (stroke (width 0.1524) (type default))
-        (fill (type none))
-      )
-    )
-    (symbol "Fail__S4.4__GND_wrong_type_1_1"
-      (pin passive line (at 6.35 1.27 0) (length 2.54)
-        (name "GND" (effects (font (size 1.27 1.27))))
-        (number "42" (effects (font (size 1.27 1.27))))
-      )
-    )
-  )
-  (symbol "Warn__S4.4__PowerOutPinsWrongType" (in_bom yes) (on_board yes)
-    (property "Reference" "U" (at -6.35 11.43 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "Warn__S4.4__PowerOutPinsWrongType" (at 0 -10.16 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (symbol "Warn__S4.4__PowerOutPinsWrongType_0_1"
-      (rectangle (start -7.62 10.16) (end 6.35 -8.89)
-        (stroke (width 0.1524) (type default))
-        (fill (type none))
-      )
-    )
-    (symbol "Warn__S4.4__PowerOutPinsWrongType_1_1"
-      (pin passive line (at 6.35 1.27 0) (length 2.54)
-        (name "Vout" (effects (font (size 1.27 1.27))))
-        (number "42" (effects (font (size 1.27 1.27))))
-      )
-    )
-  )
+(kicad_symbol_lib
+	(version 20231120)
+	(generator "kicad_symbol_editor")
+	(generator_version "8.0")
+	(symbol "Fail__S4.4__DoubleInvertedPin"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -6.35 11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fail__S4.4__DoubleInvertedPin"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Fail__S4.4__DoubleInvertedPin_0_1"
+			(rectangle
+				(start -7.62 10.16)
+				(end 6.35 -8.89)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Fail__S4.4__DoubleInvertedPin_1_1"
+			(pin passive inverted
+				(at 6.35 1.27 0)
+				(length 2.54)
+				(name "~{nDoubleInverted}"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol "Fail__S4.4__GND_wrong_type"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -6.35 11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fail__S4.4__GND_wrong_type"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Fail__S4.4__GND_wrong_type_0_1"
+			(rectangle
+				(start -7.62 10.16)
+				(end 6.35 -8.89)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Fail__S4.4__GND_wrong_type_1_1"
+			(pin passive line
+				(at 6.35 1.27 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol "Warn__S4.4__PowerOutPinsWrongType"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -6.35 11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Warn__S4.4__PowerOutPinsWrongType"
+			(at 0 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "Warn__S4.4__PowerOutPinsWrongType_0_1"
+			(rectangle
+				(start -7.62 10.16)
+				(end 6.35 -8.89)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Warn__S4.4__PowerOutPinsWrongType_1_1"
+			(pin passive line
+				(at 6.35 1.27 0)
+				(length 2.54)
+				(name "Vout"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+	)
 )

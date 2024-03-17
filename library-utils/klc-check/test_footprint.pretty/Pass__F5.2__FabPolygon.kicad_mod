@@ -1,23 +1,89 @@
-(module "Pass__F5.2__FabPolygon" (version 20211014) (generator pcbnew)
-  (layer "F.Cu")
-  (tedit 61EC8752)
-  (attr smd)
-  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 5f89a2b1-7f27-4b10-80e4-ace4b437d04b)
-  )
-  (fp_text value "Pass__F5.2__FabPolygon" (at 0 1 unlocked) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 9d7fcd45-455f-4fd8-bf85-82863fd70975)
-  )
-  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp da285362-0966-45a7-b270-8494f2359e56)
-  )
-  (fp_poly (pts
-      (xy 2 2)
-      (xy -2 2)
-      (xy -2 -2)
-      (xy 2 -2)
-    ) (layer "F.Fab") (width 0.1) (fill solid) (tstamp 678d05c5-bf8a-4def-b363-497fd128ef14))
+(footprint "Pass__F5.2__FabPolygon"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(layer "F.SilkS")
+		(uuid "5f89a2b1-7f27-4b10-80e4-ace4b437d04b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pass__F5.2__FabPolygon"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9d7fcd45-455f-4fd8-bf85-82863fd70975")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eeef3c0f-2bc6-405a-b1bf-6e84282439ff")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0b065cac-fa8a-48a2-ac35-188a10aa45fa")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "69dd2bc8-c461-46b1-be3b-e17783f1ea66")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(fp_poly
+		(pts
+			(xy 2 2) (xy -2 2) (xy -2 -2) (xy 2 -2)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Fab")
+		(uuid "678d05c5-bf8a-4def-b363-497fd128ef14")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(layer "F.Fab")
+		(uuid "da285362-0966-45a7-b270-8494f2359e56")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
 )

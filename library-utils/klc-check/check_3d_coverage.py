@@ -24,10 +24,8 @@ class Config:
         self.print_color = True
         self.summary = False
         self.library = []
-        self.root = os.path.join("..", "..")
+        self.root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
         self.parse_arguments()
-        self.library_root = os.path.join(self.root, "kicad-footprints")
-        self.model_root = os.path.join(self.root, "kicad-packages3D")
 
     def model_dir_path(self, library_name):
         return os.path.join(self.model_root, library_name + ".3dshapes")
@@ -126,6 +124,18 @@ class Config:
             nargs="*",
         )
         parser.add_argument(
+            "-m",
+            "--models",
+            help="path to KiCad 3d models folder (default is ../../kicad-packages3D)",
+            type=str,
+        )
+        parser.add_argument(
+            "-f",
+            "--footprints",
+            help="path to KiCad footprint folder (default is ../../kicad-footprints)",
+            type=str,
+        )
+        parser.add_argument(
             "-r",
             "--root",
             help="path to root KiCad folder (default is ../../)",
@@ -147,6 +157,12 @@ class Config:
             self.library.append(str(args.library[0]))
         if args.root:
             self.root = str(args.root)
+        self.library_root = os.path.join(self.root, "kicad-footprints")
+        self.model_root = os.path.join(self.root, "kicad-packages3D")
+        if args.footprints:
+            self.library_root = str(args.footprints)
+        if args.models:
+            self.model_root = str(args.models)
         if args.summary:
             self.summary = True
 
