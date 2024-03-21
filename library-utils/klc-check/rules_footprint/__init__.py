@@ -2,7 +2,6 @@ def get_all_footprint_rules():
     # without this delayed import, the rules could not import our sub-modules (e.g. klc_constants)
     from . import (
         EC01,
-        EC02,
         F5_1,
         F5_2,
         F5_3,
@@ -12,7 +11,7 @@ def get_all_footprint_rules():
         F6_3,
         F7_1,
         F7_2,
-        # F7_3,
+        #F7_3,
         F7_4,
         F7_5,
         F7_6,
@@ -25,7 +24,6 @@ def get_all_footprint_rules():
 
     return {
         "EC01": EC01,
-        "EC02": EC02,
         "G1.1": G1_1,
         "G1.7": G1_7,
         "F5.1": F5_1,

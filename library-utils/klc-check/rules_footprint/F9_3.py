@@ -7,7 +7,7 @@ from rulebase import isValidName
 from rules_footprint.rule import KLCRule
 
 SYSMOD_PREFIX = "${KICAD_SIMPANEL_DIR}/"
-OLD_SYSMOD_PREFIX_RE = r"^(\$\{KICAD[0-6]_3DMODEL_DIR\})/"
+OLD_SYSMOD_PREFIX_RE = r"^(\$\{KICAD[0-7]_3DMODEL_DIR\})/"
 
 
 class Rule(KLCRule):
@@ -141,14 +141,14 @@ class Rule(KLCRule):
         fp_dir = self.module_dir[0] + ".3dshapes"
         fp_name = self.module.name
 
-        # if model_dir != fp_dir:
-        #     self.error(
-        #         "3D model directory is different from footprint directory (found"
-        #         " '{n1}', should be '{n2}')".format(n1=model_dir, n2=fp_dir)
-        #     )
-        #     self.model3D_wrongLib = True
-        #     self.needsFixMore = True
-        #     error = True
+        if model_dir != fp_dir:
+            self.error(
+                "3D model directory is different from footprint directory (found"
+                " '{n1}', should be '{n2}')".format(n1=model_dir, n2=fp_dir)
+            )
+            self.model3D_wrongLib = True
+            self.needsFixMore = True
+            error = True
 
         if model_file != fp_name:
             # Exception for footprints that have known suffixes

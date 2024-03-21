@@ -429,18 +429,9 @@ if __name__ == "__main__":
                 metrics_file.write(line + "\n")
                 if ".total_errors" in line:
                     error_count += int(line.split()[-1])
-
-        metrics_file.close()
-
-    # If high verbosiry, calculate the error and warning count
-    # This will be used by GitHub actions to ensure an warnings and errors are detected by the workflow
-    if verbosity == verbosity.HIGH:
-        for key in job_output:
-            for line in job_output[key]:
-                if ".total_errors" in line:
-                    error_count += int(line.split()[-1])
                 if ".total_warnings" in line:
                     warning_count += int(line.split()[-1])
 
+        metrics_file.close()
     out_queue.close()
     sys.exit(0 if error_count == 0 and warning_count == 0 else -1)

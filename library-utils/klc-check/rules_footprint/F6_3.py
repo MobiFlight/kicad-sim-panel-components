@@ -15,9 +15,29 @@ class Rule(KLCRule):
 
         self.stencil_pads_with_number: List[Dict[str, Any]] = []
 
+        self.pads_that_should_be_rounded: List[Dict[str, Any]] = []
+
+    @staticmethod
+    def _pad_should_be_rounded(pad) -> bool:
+        """
+        Determine if some given pad is supposed to be rounded per F6.3.4
+        """
+        return (pad['type'] == 'smd'
+                and pad['property'] != "pad_prop_heatsink")
+
+    def check_pad_rounding(self, pad):
+        """
+        Check for pad rounding errors per F6.3.4 and add to the relevant
+        error list if found.
+        """
+
+        if self._pad_should_be_rounded(pad) and pad['shape'] == 'rect':
+            self.pads_that_should_be_rounded.append(pad)
+
     def checkPads(self, pads: List[Dict[str, Any]]) -> bool:
 
         self.stencil_pads_with_number = []
+        self.pads_that_should_be_rounded = []
         missing_layer_errors = []
         extra_layer_errors = []
 
@@ -42,6 +62,8 @@ class Rule(KLCRule):
 
             if not pad["type"] == "smd":
                 continue
+
+            self.check_pad_rounding(pad)
 
             err = False
 
@@ -136,6 +158,13 @@ class Rule(KLCRule):
                         n=p["number"], x=p["pos"]["x"], y=p["pos"]["y"]
                     )
                 )
+
+        if self.pads_that_should_be_rounded:
+            err = True
+            non_round_pad_numbers = [str(pad["number"]) for pad in self.pads_that_should_be_rounded]
+            self.warning("Rectangular SMD pad")
+            self.warningExtra(f"Pads {', '.join(non_round_pad_numbers)} are rectangular. "
+                              "If possible, change to rounded-rectangle.")
 
         if extra_layer_errors:
             err = True

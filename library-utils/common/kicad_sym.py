@@ -247,7 +247,10 @@ class TextEffect(KicadSymbolBase):
         (sizex, sizey) = _get_xy(font, "size")
         is_italic = "italic" in font
         is_bold = "bold" in font
-        is_hidden = "hide" in sexpr
+        is_hidden = False
+        hidearray = _get_array2(sexpr, "hide")
+        if len(hidearray) and "yes" in hidearray[0]:
+            is_hidden = True
         is_mirrored = "mirror" in sexpr
         justify = _get_array2(sexpr, "justify")
         h_justify = "center"
@@ -883,7 +886,7 @@ class KicadSymbol(KicadSymbolBase):
 
         return sx
 
-    def get_center_rectangle(self, units: List[int]) -> Optional[Polyline]:
+    def get_center_rectangle(self, units: Optional[List[int]]=None) -> Optional[Polyline]:
         # return a polyline for the requested unit that is a rectangle
         # and is closest to the center
         candidates = {}
@@ -891,7 +894,7 @@ class KicadSymbol(KicadSymbolBase):
         pl_rects = [i.as_polyline() for i in self.rectangles]
         pl_rects.extend(pl for pl in self.polylines if pl.is_rectangle())
         for pl in pl_rects:
-            if pl.unit in units:
+            if (units is None) or (pl.unit in units):
                 # extract the center, calculate the distance to origin
                 (x, y) = pl.get_center_of_boundingbox()
                 dist = math.sqrt(x * x + y * y)
@@ -942,7 +945,7 @@ class KicadSymbol(KicadSymbolBase):
             {"i": 3, "n": "Datasheet", "v": "", "h": True},
             {"i": 4, "n": "ki_locked", "v": "", "h": True},
             {"i": 5, "n": "ki_keywords", "v": "", "h": True},
-            {"i": 6, "n": "ki_description", "v": "", "h": True},
+            {"i": 6, "n": "Description", "v": "", "h": True},
             {"i": 7, "n": "ki_fp_filters", "v": "", "h": False},
         ]
 
@@ -970,7 +973,7 @@ class KicadSymbol(KicadSymbolBase):
         sym.get_property("Footprint").value = footprint
         sym.get_property("Datasheet").value = datasheet
         sym.get_property("ki_keywords").value = keywords
-        sym.get_property("ki_description").value = description
+        sym.get_property("Description").value = description
         if isinstance(fp_filters, list):
             fp_filters = " ".join(fp_filters)
         sym.get_property("ki_fp_filters").value = fp_filters
@@ -1066,6 +1069,25 @@ class KicadLibrary(KicadSymbolBase):
             sx.append(sym.get_sexpr())
         return sexpr.build_sexp(sx)
 
+    def check_extends_order(self):
+        """
+        Check if every parent symbol exists & appears before every
+        child symbol that extends it.
+
+        Raises:
+            KicadFileFormatError: If a parent symbol does not exist
+                or appears after a child symbol that extends it.
+        """
+        already_seen = set()
+        for symbol in self.symbols:
+            name = symbol.name
+            parent = symbol.extends
+            if parent and parent not in already_seen:
+                raise KicadFileFormatError(
+                    f"Parent symbol {parent} of {name} not found"
+                )
+            already_seen.add(symbol.name)
+
     @classmethod
     def from_file(cls, filename: str, data=None) -> "KicadLibrary":
         """
@@ -1091,8 +1113,11 @@ class KicadLibrary(KicadSymbolBase):
         # to ensure that this parser is only used with v6 files. Any other version will most likely
         # not work as expected. So just don't load them at all.
         version = _get_value_of(sexpr_data, "version")
-        if str(version) != "20220914":
-            raise KicadFileFormatError(f'Version of symbol file is "{version}", not "20220914"')
+        if str(version) != "20231120":
+            raise KicadFileFormatError(f'Version of symbol file is "{version}", not "20231120"')
+
+        # for tracking derived symbols we need another dict
+        symbol_names = {}
 
         # itertate over symbol
         for item in sym_list:
@@ -1100,10 +1125,15 @@ class KicadLibrary(KicadSymbolBase):
             if item_type != "symbol":
                 raise KicadFileFormatError(f"Unexpected token found: {item_type}")
             # retrieving the `partname`, even if formatted as `libname:partname` (legacy format)
-            partname = item.pop(0).split(":")[-1]
+            partname = str(item.pop(0).split(":")[-1])
 
             # we found a new part, extract the symbol name
-            symbol = KicadSymbol(str(partname), libname=filename, filename=filename)
+            symbol = KicadSymbol(partname, libname=filename, filename=filename)
+
+            # build a dict of symbolname -> symbol
+            if partname in symbol_names:
+                raise KicadFileFormatError(f"Duplicate symbols: {partname}")
+            symbol_names[partname] = symbol
 
             # extract extends property
             extends = _get_array2(item, "extends")
