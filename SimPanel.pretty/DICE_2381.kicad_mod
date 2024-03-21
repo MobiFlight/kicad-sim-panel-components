@@ -4,7 +4,7 @@
 	(generator_version "8.0")
 	(layer "F.Cu")
 	(descr "Three Digit 7-segment LED Display, 0.28-inch digit height, common cathode")
-	(tags "3-digit LED seven-segment XLITX CL2832AW")
+	(tags "3-digit LED seven-segment XLITX CL2832AW common cathode")
 	(property "Reference" "REF**"
 		(at -5.65 -3.81 90)
 		(layer "F.SilkS")
