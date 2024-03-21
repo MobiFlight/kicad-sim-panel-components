@@ -4,6 +4,8 @@ Welcome to the KiCad Sim-Panel Library repository! This collection is dedicated 
 
 We aim to achieve compliance with the [KiCad Library Convention (KLC)](https://klc.kicad.org/) for all our components, with a few exceptions. See [Contributing - KLC Compliance Checks](CONTRIBUTING.md#klc-compliance-checks)
 
+The KiCad Sim-Panel Library repository has been tested against KiCad 8.
+
 ## What's Inside
 
 ### KiCad Symbols
