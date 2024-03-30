@@ -29,9 +29,7 @@ class Rule(KLCRule):
             return False
 
         # check if component has just one rectangle, if not, skip checking
-        self.center_rect_polyline = self.component.get_center_rectangle(
-            range(self.component.unit_count)
-        )
+        self.center_rect_polyline = self.component.get_center_rectangle()
         if self.center_rect_polyline is None:
             return False
 

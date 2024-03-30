@@ -138,7 +138,7 @@ class Rule(KLCRule):
         return fail
 
     def checkDescription(self) -> bool:
-        dsc = self.component.get_property("ki_description")
+        dsc = self.component.get_property("Description")
         if not dsc:
             # can not do other checks, return
             if self.component.is_power_symbol():
