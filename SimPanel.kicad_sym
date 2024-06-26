@@ -2850,7 +2850,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "SOP*3.8x9.8mm*P0.635mm* QFN*4x4mm*P0.5mm*EP2.15x2.15mm*"
+		(property "ki_fp_filters" "SOP*3.8x9.8mm*P0.65mm* QFN*4x4mm*P0.5mm*EP2.15x2.15mm*"
 			(at 0 0 0)
 			(effects
 				(font
