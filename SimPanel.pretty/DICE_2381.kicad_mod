@@ -1,7 +1,7 @@
 (footprint "DICE_2381"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "Three Digit 7-segment LED Display, 0.28-inch digit height, common cathode")
 	(tags "3-digit LED seven-segment XLITX CL2832AW common cathode")
@@ -27,18 +27,6 @@
 			)
 		)
 	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "13d2daad-06f2-4811-980f-bcff28fffd28")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(property "Datasheet" ""
 		(at 0 0 0)
 		(unlocked yes)
@@ -48,6 +36,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -60,6 +49,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -71,18 +61,18 @@
 			(width 0.12)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "8c67579c-29de-430f-8a84-22f2ebe1d32d")
 	)
 	(fp_rect
-		(start -5.15 -9.06)
-		(end 17.85 1.44)
+		(start -5.08 -9)
+		(end 17.78 1.37)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "5adc22ae-8e12-409b-aad0-df46760ecc61")
 	)
@@ -93,7 +83,7 @@
 			(width 0.1)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "ff85a32b-fd4f-41b7-93ee-0b71fabadcef")
 	)
@@ -197,6 +187,7 @@
 		(remove_unused_layers no)
 		(uuid "26c71cb6-9d74-498d-a51c-fe49844e9234")
 	)
+	(embedded_fonts no)
 	(model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/DICE_2381.step"
 		(offset
 			(xyz 0 0 0)
