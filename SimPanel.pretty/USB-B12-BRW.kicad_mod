@@ -283,7 +283,7 @@
 		(members "80306afa-0f0f-464d-924d-613d9c4e12ff" "ce792a6a-5977-4cde-b508-b03c405ac238")
 	)
 	(embedded_fonts no)
-	(model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/USB-B-5787834-1.stp"
+	(model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/USB-B12-BRW.step"
 		(offset
 			(xyz 0 0 0)
 		)
