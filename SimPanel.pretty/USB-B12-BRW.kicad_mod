@@ -3,6 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
+	(descr "Vertical through hole USB B connector")
 	(tags "USB_B USB B vertical female connector")
 	(property "Reference" "REF**"
 		(at -4.572 -2.286 0)
@@ -157,45 +158,16 @@
 		(layer "F.SilkS")
 		(uuid "16d0873e-711f-44c8-8bb5-ddd38a094670")
 	)
-	(fp_line
-		(start -9.02 8.128)
-		(end 6.48 8.128)
+	(fp_rect
+		(start -9 -3.81)
+		(end 6.35 8.255)
 		(stroke
 			(width 0.05)
-			(type solid)
+			(type default)
 		)
+		(fill no)
 		(layer "F.CrtYd")
-		(uuid "3709bd80-30e5-4f88-8b4d-978e685cd3d0")
-	)
-	(fp_line
-		(start -9 8.128)
-		(end -9 -3.81)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "eba5d2c4-f8bc-4fbc-8a79-3c0fbe8e8c81")
-	)
-	(fp_line
-		(start 6.5 -3.81)
-		(end -9 -3.81)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "6acc0462-47a9-4773-90f0-e3cc906c21b0")
-	)
-	(fp_line
-		(start 6.5 -3.81)
-		(end 6.5 8.128)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "f8cd624c-5023-4af5-acd3-b6d1f4f9bebf")
+		(uuid "e3d9c39f-187b-4d61-a26d-fe21f54af7e5")
 	)
 	(fp_line
 		(start -8.25 -3.556)
@@ -311,7 +283,7 @@
 		(members "80306afa-0f0f-464d-924d-613d9c4e12ff" "ce792a6a-5977-4cde-b508-b03c405ac238")
 	)
 	(embedded_fonts no)
-	(model "D:/MSFS-git/kicad-sim-panel-components-temp/SimPanelTemp.3dshapes/USB-B-5787834-1.stp"
+	(model "${KICAD_SIMPANEL_DIR}/SimPanel.3dshapes/USB-B-5787834-1.stp"
 		(offset
 			(xyz 0 0 0)
 		)
