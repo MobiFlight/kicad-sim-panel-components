@@ -3367,7 +3367,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Vertical through-hole USB B connector"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3376,7 +3376,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C6081376"
+		(property "LCSC Part #" "C720550"
 			(at 0 9.525 0)
 			(effects
 				(font
