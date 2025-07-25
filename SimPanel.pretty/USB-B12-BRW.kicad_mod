@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "USB_B12-BRW"
+	(property "Value" "USB-B12-BRW"
 		(at -1.27 10.922 0)
 		(layer "F.Fab")
 		(uuid "9965d813-6fd1-43af-8164-4272cce73cb5")
