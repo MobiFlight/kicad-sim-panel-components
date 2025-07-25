@@ -4,8 +4,8 @@
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "USB_B USB B vertical female connector")
-	(property "Reference" "J4"
-		(at -5.842 -2.286 0)
+	(property "Reference" "REF**"
+		(at -4.572 -2.286 0)
 		(layer "F.SilkS")
 		(uuid "36f8777c-bfa6-4bf8-855d-91ac546d0a68")
 		(effects
@@ -15,8 +15,8 @@
 			)
 		)
 	)
-	(property "Value" "USB_B"
-		(at -1.25 10.25 0)
+	(property "Value" "USB_B12-BRW"
+		(at -1.27 10.922 0)
 		(layer "F.Fab")
 		(uuid "9965d813-6fd1-43af-8164-4272cce73cb5")
 		(effects
@@ -54,7 +54,7 @@
 			(justify mirror)
 		)
 	)
-	(property "LCSC Part #" "C6081376"
+	(property "LCSC Part #" "C720550"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -71,7 +71,7 @@
 		(start -7.25 -3.42)
 		(end 4.75 -3.42)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -81,7 +81,7 @@
 		(start -7.25 1.016)
 		(end -7.25 -3.42)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -91,7 +91,7 @@
 		(start -7.25 7.58)
 		(end -7.25 4.572)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -131,7 +131,7 @@
 		(start 4.75 -3.42)
 		(end 4.75 1.016)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -141,7 +141,7 @@
 		(start 4.75 4.572)
 		(end 4.75 7.58)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -151,21 +151,11 @@
 		(start 4.75 7.58)
 		(end -7.25 7.58)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
 		(uuid "16d0873e-711f-44c8-8bb5-ddd38a094670")
-	)
-	(fp_line
-		(start -9.02 8.128)
-		(end -9 -3.81)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "eba5d2c4-f8bc-4fbc-8a79-3c0fbe8e8c81")
 	)
 	(fp_line
 		(start -9.02 8.128)
@@ -176,6 +166,16 @@
 		)
 		(layer "F.CrtYd")
 		(uuid "3709bd80-30e5-4f88-8b4d-978e685cd3d0")
+	)
+	(fp_line
+		(start -9 8.128)
+		(end -9 -3.81)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "eba5d2c4-f8bc-4fbc-8a79-3c0fbe8e8c81")
 	)
 	(fp_line
 		(start 6.5 -3.81)
@@ -201,7 +201,7 @@
 		(start -8.25 -3.556)
 		(end -8.25 7.874)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type solid)
 		)
 		(layer "F.Fab")
@@ -211,7 +211,7 @@
 		(start -8.25 7.874)
 		(end 5.75 7.874)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type solid)
 		)
 		(layer "F.Fab")
@@ -221,7 +221,7 @@
 		(start 5 -3.556)
 		(end -8.25 -3.556)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type solid)
 		)
 		(layer "F.Fab")
@@ -231,7 +231,7 @@
 		(start 5.75 -2.806)
 		(end 5 -3.556)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type solid)
 		)
 		(layer "F.Fab")
@@ -241,14 +241,14 @@
 		(start 5.75 7.874)
 		(end 5.75 -2.806)
 		(stroke
-			(width 0.1)
+			(width 0.12)
 			(type solid)
 		)
 		(layer "F.Fab")
 		(uuid "d4eced3b-0745-4ad1-bc80-8c90e031ae8b")
 	)
 	(fp_text user "${REFERENCE}"
-		(at -2.445 9.823537 0)
+		(at -1.27 9.144 0)
 		(layer "F.Fab")
 		(uuid "8107f4bf-e64c-4ab4-a723-79af59470cf5")
 		(effects
